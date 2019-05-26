@@ -4,8 +4,9 @@ email: jozef.witold.podlecki@gmail.com
 
 description: >
   Portfolio and blog
-baseurl: "Jozefpodlecki.github.io"
-url: "Jozefpodlecki.github.io"
+# baseurl: "Jozefpodlecki.github.io"
+baseurl: ""
+url: ""
 
 social_links:
   github:  jozefpodlecki
