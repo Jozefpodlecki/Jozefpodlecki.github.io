@@ -1,0 +1,18 @@
+
+title: Józef Podlecki
+email: jozef.witold.podlecki@gmail.com
+
+description: >
+  Portfolio and blog
+baseurl: ""
+url: ""
+
+social_links:
+  github:  jozefpodlecki
+  facebook: jozek.podlecki
+  linkedin: jozef-witold-podlecki
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
