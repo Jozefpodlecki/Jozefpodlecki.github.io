@@ -1,1 +1,0 @@
-# Jozefpodlecki.github.io

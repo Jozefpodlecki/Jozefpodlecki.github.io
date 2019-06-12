@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "C#",
+        "level" : "3"
+    },
+    {
+        "name" : "ASP .Net",
+        "level" : "3"
+    },
+    {
+        "name" : ".Net Core",
+        "level" : "3"
+    },
+    {
+        "name" : "ASP .Net Core",
+        "level" : "3"
+    },
+    {
+        "name" : "tSQL",
+        "level" : "4"
+    },
+    {
+        "name" : "Powershell",
+        "level" : "3"
+    },
+    {
+        "name" : "Tableau Desktop",
+        "level" : "3"
+    },
+    {
+        "name" : "Reporting Services",
+        "level" : "3"
+    },
+    {
+        "name" : "React",
+        "level" : "2"
+    },
+    {
+        "name" : "Typescript",
+        "level" : "2"
+    },
+    {
+        "name" : "Angular 7",
+        "level" : "1"
+    },
+    {
+        "name" : "CSS/SCSS",
+        "level" : "2"
+    }
+]

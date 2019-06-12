@@ -1,0 +1,18 @@
+[
+    {
+        "displayName": "Home",
+        "path": "/"
+    },
+    {
+        "displayName": "About me",
+        "path": "/about"
+    },
+    {
+        "displayName": "Projects",
+        "path": "/projects"
+    },
+    {
+        "displayName": "Contact",
+        "path": "/contact"
+    }
+]
