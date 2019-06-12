@@ -56,7 +56,7 @@ class ContactComponent extends React.Component<any, IState> {
     });
 
     return (
-      <div className="container">
+      <div className="contactContainer">
         <div className="subContainer">
           <i className="fas fa-map-marker-alt fa-10x" />
           <p className="address">{this.state.profile.address}</p>

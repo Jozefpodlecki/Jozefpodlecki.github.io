@@ -82,7 +82,7 @@ class AboutComponent extends React.Component<any, IState> {
 
   render() {
     return (
-      <div className="container">
+      <div className="aboutContainer">
         <div className="summaryContainer">
           <div className="about">
             <div className="paragraphWrapper">
