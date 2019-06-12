@@ -1,0 +1,15 @@
+{
+    "fullName" : "Józef Podlecki",
+    "avatarUrl" : "/avatar.jpg",
+    "address": "3 Flaxley Court, Selby, YO8 4XH",
+    "startTitle": "Software Developer",
+    "titles" : [
+        "C# Backend Developer",
+        ".Net Developer C#",
+        "SQL Developer (SSIS, SSRS)",
+        "C# SQL Developer",
+        "SQL Developer SSRS SSIS ETL",
+        "SQL Developer (T-SQL  MsSQL)"
+    ],
+    "summary": "Józef Podlecki is an experienced software developer. He is strong in design and integration problem-solving skills. Expert in database analysis and design. Skilled in developing requirements, specifications and user documentation. Strong written and verbal communication. Solid analytical skills for writing relational database solutions for businesses"
+}
