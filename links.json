@@ -1,0 +1,34 @@
+[
+    {
+        "className": "fab fa-github fa-10x",
+        "url": "https://github.com/Jozefpodlecki"
+    },
+    {
+        "className": "fab fa-linkedin fa-10x",
+        "url": "https://linkedin.com/in/jozef-witold-podlecki/"
+    },
+    {
+        "className": "fas fa-envelope-square fa-10x",
+        "url": "mailto:jozef.witold.podlecki@gmail.com"
+    },
+    {
+        "className": "fab fa-free-code-camp fa-10x",
+        "url": "https://www.freecodecamp.org/jozefpodlecki"
+    },
+    {
+        "src": "/duolingo.jpg",
+        "url": "https://www.duolingo.com/JozefPodlecki"
+    },
+    {
+        "src": "./codewars.png",
+        "url": "https://www.codewars.com/users/Jozefpodlecki"
+    },
+    {
+        "className": "fab fa-facebook-square fa-10x",
+        "url": "https://www.facebook.com/jozek.podlecki"
+    },
+    {
+        "src": "./tableau.jpg",
+        "url": "https://public.tableau.com/profile/j.zef.podlecki#!/"
+    }
+]
