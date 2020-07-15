@@ -1,5 +1,6 @@
 const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
@@ -22,7 +23,10 @@ module.exports = {
     disableHostCheck: true
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue'],
+    plugins: [
+      new TsconfigPathsPlugin({ /*configFile: "./tsconfig.json" */ }),
+    ]
   },
   module: {
     rules: [

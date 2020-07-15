@@ -43,7 +43,7 @@
   import ProjectsList from './List/index.vue'
   import ProjectsGrid from './Grid/index.vue'
   import ProjectFilter from './Filter.vue'
-import { ProjectSearchCriteria } from '../../models'
+import { ProjectSearchCriteria } from '@models'
 
   export default {
     name: 'ProjectsDetailed',
