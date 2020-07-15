@@ -78,7 +78,7 @@
         >
           <img
             class="contact__image"
-            src="/assets/duolingo.jpg"
+            src="/assets/social/duolingo.jpg"
             alt="duolingo"
           >
         </a>
@@ -88,7 +88,7 @@
         >
           <img
             class="contact__image"
-            src="/assets/codewars.png"
+            src="/assets/social/codewars.png"
             alt="codewars"
           >
         </a>
@@ -98,7 +98,7 @@
         >
           <img
             class="contact__image"
-            src="/assets/anime_planet.jpg"
+            src="/assets/social/anime_planet.jpg"
             alt="anime_planet"
           >
         </a>
@@ -108,7 +108,7 @@
         >
           <img
             class="contact__image"
-            src="/assets/tableau.jpg"
+            src="/assets/social/tableau.jpg"
             alt="tableau"
           >
         </a>
