@@ -12,21 +12,26 @@ const defaultCriteria: ProjectSearchCriteria = {
   name: ''
 }
 
-export const getProjects = (criteria: ProjectSearchCriteria = defaultCriteria) => new Promise<Page<Project>>((resolve, reject) => {
+export const getProjects = (criteria: ProjectSearchCriteria) => new Promise<Page<Project>>((resolve, reject) => {
     let projects = <Project[]>projectsJson;
+
+    criteria = {
+      ...defaultCriteria,
+      ...criteria
+    }
 
     projects = projects.map((project, index) => ({
         ...project,
-        thumbnail: project.thumbnail || 'assets/thumbnail.png',
-        preview: project.preview || 'assets/thumbnail.webm',
+        thumbnail: project.thumbnail || 'assets/projects/thumbnail.png',
+        preview: project.preview || 'assets/projects/thumbnail.webm',
         rank: project.rank || 1
     }))
     
     projects.sort((prev, next) => {
-      return prev.rank > next.rank ? -1 : 1
+      return prev.rank > next.rank ? 1 : -1
     })
 
-    const {
+    let {
       active,
       pageSize,
       page = null,
@@ -37,15 +42,18 @@ export const getProjects = (criteria: ProjectSearchCriteria = defaultCriteria) =
         projects = projects.filter(project => {
             return project.skills.some(skill => criteria.tags.includes(skill))
         })
+        
     }
     
     projects = projects.filter(project => project.active === active);
     
     if(name) {
-      projects = projects.filter(project => project.name.toLowerCase().includes(criteria.name.toLowerCase()))
+      name = name.toLowerCase();
+      projects = projects.filter(project => project.name.toLowerCase().includes(name));
+     
     }
 
-    const total = Math.floor(projects.length / pageSize);
+    const total = Math.ceil(projects.length / pageSize);
 
     if(page !== null) {
       const items = page * pageSize;

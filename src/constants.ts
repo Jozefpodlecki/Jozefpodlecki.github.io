@@ -1,86 +1,97 @@
 export const skillsMap = [
     {
-        image: '/assets/html.svg',
+        image: 'html.svg',
         id: 'HTML'
     },
     {
-        image: '/assets/sass.png',
+        image: 'sass.png',
         id: 'Sass'
     },
     {
-        image: '/assets/stylus.png',
+        image: 'stylus.png',
         id: 'Stylus'
     },
     {
-        image: '/assets/less.png',
+        image: 'less.png',
         id: 'Less'
     },
     {
-        image: '/assets/python.png',
+        image: 'python.png',
         id: 'Python'
     },
     {
-        image: '/assets/flask.png',
+        image: 'flask.png',
         id: 'Flask'
     },
     {
-        image: '/assets/react.png',
+        image: 'react.png',
         id: 'React'
     },
     {
-        image: '/assets/d3js.png',
+        image: 'd3js.png',
         id: 'D3js'
     },
     {
-        image: '/assets/angular.png',
+        image: 'angular.png',
         id: 'Angular'
     },
     {
-        image: '/assets/vue-js.png',
+        image: 'vue-js.png',
         id: 'Vue'
     },
     {
-        image: '/assets/wpf.webp',
+        image: 'wpf.webp',
         id: 'WPF'
     },
     {
-        image: '/assets/c-sharp.png',
+        image: 'c-sharp.png',
         id: 'C#'
     },
     {
-        image: '/assets/express.png',
+        image: 'express.png',
         id: 'Express'
     },
     { 
-        image: '/assets/typescript.png',
+        image: 'typescript.png',
         id: 'Typescript'
     },
     { 
-        image: '/assets/pug.png',
+        image: 'pug.png',
         id: 'Pug'
     },
     {
-        image: '/assets/mongodb.png',
+        image: 'mongodb.png',
         id: 'MongoDB'
     },
     {
-        image: '/assets/webpack.png',
+        image: 'webpack.png',
         id: 'Webpack'
     },
     {
-        image: '/assets/mongoose.png',
+        image: 'mongoose.png',
         id: 'Mongoose'
     },
     {
-        image: "/assets/knockout-js.png",
+        image: "knockout-js.png",
         id: "Knockout-Js"
     },
     {
-        image: "/assets/indexedDB.jpg",
+        image: "indexedDB.jpg",
         id: "IndexedDB"
+    },
+    {
+        image: "rust.png",
+        id: "Rust"
+    },
+    {
+        image: "webAssemblyLogo.svg",
+        id: "WebAssembly"
     }
 ].reduce((acc, val) => {
-    acc[val.id] = val;
+    acc[val.id] = {
+        ...val,
+        image: `assets/skills/${val.image}`
+    };
     return acc;
 }, {} as any)
 
@@ -113,7 +124,7 @@ export const actionComponentMap = [
         type: 'glitch',
         component: 'image-action',
         className: 'imageAction',
-        src: '/assets/glitch.svg'
+        src: 'assets/actions/glitch.svg'
     },
     {
         type: 'live',

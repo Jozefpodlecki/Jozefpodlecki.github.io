@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "description": "Jozef Podlecki - Portfolio",
   "scripts": {
-    "build": "webpack --mode development",
-    "build:production": "webpack --mode production",
+    "build": "webpack --mode development --config webpack.development.js",
+    "build:production": "webpack --mode production --config webpack.production.js",
     "lint": "eslint --ext .js,.vue src --fix",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --config webpack.development.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-common-types": "0.2.27",

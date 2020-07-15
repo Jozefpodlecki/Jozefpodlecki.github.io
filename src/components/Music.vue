@@ -22,6 +22,7 @@
       />
     </span>
     <audio
+      ref="audio"
       class="music__audio"
       :src="audio_data"
     />
@@ -34,13 +35,22 @@
     name: 'Music',
     data() {
       return {
-          audio_data: null as any,
-          playing: false
+        audio_data: "/assets/Redwood.mp3",
+        playing: false
       }
     },
     methods: {
         toggleMusic() {
             this.playing = !this.playing;
+            const audio = this.$refs.audio as HTMLAudioElement;
+
+            if(this.playing) {
+              audio.play();
+            }
+            else {
+              audio.pause();
+              audio.currentTime = 0;
+            }
         }
     }
   }

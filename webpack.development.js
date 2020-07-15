@@ -5,7 +5,7 @@ const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
  
-const outputPath = __dirname
+const outputPath = __dirname + '/dist'
 
 module.exports = {
   mode: "development",

@@ -306,6 +306,7 @@
       border-radius: 10px;
       border: none;
       background: #0c091d;
+      color: white;
       transition: box-shadow .3s ease-in;
       box-shadow: 0px 1px 10px 0px $white;
 

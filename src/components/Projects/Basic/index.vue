@@ -28,7 +28,10 @@
       }
     },
     mounted() {
-      getProjects().then(({data, total}) => {
+      getProjects({
+        pageSize: 6,
+        page: 0
+      }).then(({data, total}) => {
         this.projects = data.map(pr => ({
           ...pr,
           state: 'thumbnail'
