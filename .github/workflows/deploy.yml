@@ -33,6 +33,8 @@ jobs:
      
       - name: Tailwind
         run: npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --minify 
+      - name: Print
+        run: echo "${{ github.event.repository.name }}"
       - name: Build App
         run: trunk build --public-url ${{ github.event.repository.name }} --release
 
