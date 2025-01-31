@@ -1,0 +1,10 @@
+/*! tailwindcss v4.0.1 | MIT License | https://tailwindcss.com */
+@tailwind base;
+@tailwind components;
+.flex {
+  display: flex;
+}
+:root {
+  background: black;
+  color: white;
+}
