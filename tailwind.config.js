@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./src/**/*.{html,rs}"],
+	mode: "jit",
+	purge: false,
 	theme: {
 		extend: {
-			brightness: {
-			  25: '.25',
-			  175: '1.75',
+			fontFamily: {
+				'roboto': ['Roboto', 'sans-serif'],
+				'oswald': ['Oswald', 'sans-serif'],
 			}
 		}
 	},

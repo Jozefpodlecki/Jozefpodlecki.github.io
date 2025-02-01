@@ -14,9 +14,9 @@
   "license": "ISC",
   "author": "Jozef Podlecki",
   "type": "commonjs",
-  "scripts": {
-  
-  },
-  "devDependencies": {
+  "scripts": {},
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3",
+    "tailwindcss": "^4.0.3"
   }
 }
