@@ -30,7 +30,12 @@ jobs:
       - name: Add wasm target
         run: |
           rustup target add wasm32-unknown-unknown
-     
+      - name: Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '2'
+      - name: Npm
+        run: npm install
       - name: Tailwind
         run: npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --minify 
       - name: Build App
