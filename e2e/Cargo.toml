@@ -1,0 +1,9 @@
+[package]
+name = "portfolio-e2e"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.84.0"
+
+[dependencies]
+thirtyfour = "0.34.0"
+tokio = { version = "1.41.0", features = ["rt", "rt-multi-thread", "macros"] }

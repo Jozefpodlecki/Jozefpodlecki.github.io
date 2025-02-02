@@ -1,0 +1,37 @@
+{
+    "full_name": "Józef Podlecki",
+    "role": "Software Developer",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/jozef-witold-podlecki/",
+        "github": "https://github.com/Jozefpodlecki",
+        "duolingo": "https://www.duolingo.com/profile/JozefPodlecki"
+    },
+    "experience": [
+        {
+            "company": "BJSS",
+            "location": "Leeds, UK",
+            "employment_type": "Full Time",
+            "work_mode": "Hybrid",
+            "role": "Software Engineer",
+            "period": "Jan 2022 - Present",
+            "responsibilities": [
+                "Contributed to a multi-year digital transformation project for a leading UK gambling company.",
+                "Extracted database calls from legacy monolithic applications and migrated them to a microservices architecture.",
+                "Contributed to the migration of legacy stored procedures powering SSRS reports to GCP BigQuery."
+            ]
+        },
+        {
+            "company": "Vismo",
+            "location": "York, UK",
+            "employment_type": "Full Time",
+            "work_mode": "Hybrid",
+            "role": ".NET Developer ",
+            "period": "Aug 2020 - Jan 2022",
+            "responsibilities": [
+                "Worked on intranet asp net core web app and powering it .net modules.",
+                "Performed ETL operations.",
+                "Triaged and troubleshooted issues reported by customers."
+            ]
+        }
+    ]
+}
