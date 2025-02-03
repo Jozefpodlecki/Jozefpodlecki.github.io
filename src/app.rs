@@ -1,7 +1,7 @@
 use log::{debug, info};
 use yew::*;
 
-use crate::{api::get_summary, dark_mode_toggle::DarkModeToggle, experience::ExperienceSection, icons::*, loader::Loader, models::{FetchError, Summary}};
+use crate::{api::get_summary, dark_mode_toggle::DarkModeToggle, experience::ExperienceSection, icons::*, loader::Loader, models::{FetchError, Summary}, projects::ProjectsSection};
 
 pub enum Message {
     #[allow(dead_code)]
@@ -62,10 +62,10 @@ impl Component for App {
             Some(summary) => {
                 html! {
                     <div class="">
-                        <div class="h-8 absolute top-1 right-1">
+                        <div class="h-0 sticky top-1 right-1">
                             <DarkModeToggle/>
                         </div>
-                        <div class="flex flex-col items-center justify-between h-screen bg-gradient-to-t from-black via-gray-900 to-gray-800">
+                        <div class="flex flex-col items-center justify-between min-h-screen bg-gradient-to-t from-black via-gray-900 to-gray-800">
                             <div class="bg-white dark:bg-black max-w-[800px] w-full p-8 rounded-lg shadow-lg m-8 flex flex-col justify-between h-full border dark:border-white">
                                 <section class="py-5">
                                     <span class="font-[oswald] block text-3xl font-bold text-gray-900 dark:text-gray-200">{summary.full_name.clone()}</span>
@@ -74,15 +74,14 @@ impl Component for App {
                                     <div class="flex justify-start gap-1 mt-2">
                                         <a class="dark:text-white" href={summary.social.linkedin.clone()}><Linkedin/></a>
                                         <a class="dark:text-white" href={summary.social.github.clone()}><Github/></a>
+                                        <a class="dark:text-white" href={summary.social.codepen.clone()}><Codepen/></a>
                                         <a class="dark:text-white" href={summary.social.duolingo.clone()}><Duolingo/></a>
                                     </div>
                                 </section>
 
-                                <section class="py-5">
-                                    <h1 class="font-[oswald] text-2xl font-bold text-gray-900 dark:text-gray-200">{"Projects"}</h1>
-                                </section>
+                                <ProjectsSection items={summary.projects.clone()} />
 
-                                <ExperienceSection items={summary.experience.clone()}/>
+                                <ExperienceSection items={summary.experience.clone()} />
 
                                 <footer class="font-[roboto] py-2 mt-auto text-center text-sm text-gray-500 dark:text-gray-300">
                                     <span>{"© Jozef Podlecki 2025"}</span>

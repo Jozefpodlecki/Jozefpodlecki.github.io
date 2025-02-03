@@ -27,7 +27,8 @@ pub struct Summary {
     pub full_name: String,
     pub role: String,
     pub social: Social,
-    pub experience: Vec<Experience>
+    pub projects: Vec<Project>,
+    pub experience: Vec<Experience>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -35,6 +36,14 @@ pub struct Social {
     pub linkedin: String,
     pub github: String,
     pub duolingo: String,
+    pub codepen: String,
+}
+
+#[derive(Debug, Clone, Deserialize, PartialEq)]
+pub struct Project {
+    pub name: String,
+    pub description: String,
+    pub link: String,
 }
 
 #[derive(Debug, Clone, Deserialize, PartialEq)]

@@ -11,6 +11,8 @@ cargo build
 trunk serve
 ```
 
+## Tailwind
+
 ```
 npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --watch
 ```

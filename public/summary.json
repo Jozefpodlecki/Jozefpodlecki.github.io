@@ -4,8 +4,16 @@
     "social": {
         "linkedin": "https://www.linkedin.com/in/jozef-witold-podlecki/",
         "github": "https://github.com/Jozefpodlecki",
+        "codepen": "https://codepen.io/Podlecki",
         "duolingo": "https://www.duolingo.com/profile/JozefPodlecki"
     },
+    "projects": [
+        {
+            "name": "Flocking Simulator",
+            "description": "Interactive web-based application that demonstrates the emergent behavior of flocking, inspired by Craig Reynolds' Boids algorithm",
+            "link": "https://jozefpodlecki.github.io/boids-blazor"
+        }
+    ],
     "experience": [
         {
             "company": "BJSS",
@@ -25,12 +33,40 @@
             "location": "York, UK",
             "employment_type": "Full Time",
             "work_mode": "Hybrid",
-            "role": ".NET Developer ",
+            "role": ".NET Developer",
             "period": "Aug 2020 - Jan 2022",
             "responsibilities": [
                 "Worked on intranet asp net core web app and powering it .net modules.",
                 "Performed ETL operations.",
                 "Triaged and troubleshooted issues reported by customers."
+            ]
+        },
+        {
+            "company": "h2o creative",
+            "location": "Leeds, UK",
+            "employment_type": "Full Time",
+            "work_mode": "In-Office",
+            "role": "Software Developer",
+            "period": "Sep 2019 - Jul 2020",
+            "responsibilities": [
+                "Developed various scale web applications written in React, Asp Net Web Forms, Asp Net Core and ZURB Foundation",
+                "Maintained existing web applications and applied new functionalities to them.",
+                "Created and modified email templates which targeted most email clients."
+            ]
+        },
+        {
+            "company": "Billennium",
+            "location": "Olsztyn, PL",
+            "employment_type": "Full Time",
+            "work_mode": "Hybrid",
+            "role": "SQL/C# Developer",
+            "period": "Jul 2016 - Aug 2019",
+            "responsibilities": [
+                "Developed Tableau visualizations and dashboards using Tableau Desktop.",
+                "Designed and implemented software in C# 4.5 with Visual Studio 2015 and later.",
+                "Worked alongside Paperless BPM software development team.",
+                "Participated in inhouse projects.",
+                "Contributed software engineering expertise in the development of products through the software lifecycle."
             ]
         }
     ]

@@ -3,18 +3,30 @@ use yew::*;
 use crate::models::Experience;
 
 #[derive(Debug, Clone, PartialEq, Properties)]
-pub struct ExperienceProps {
+pub struct Props {
     pub items: Vec<Experience>,
 }
 
 #[function_component(ExperienceSection)]
-pub fn app(props: &ExperienceProps) -> Html {
-   
+pub fn app(props: &Props) -> Html {
+    let show_all = use_state(|| false);
+
+    let visible_items = if *show_all {
+        props.items.clone()
+    } else {
+        props.items.iter().take(2).cloned().collect::<Vec<_>>()
+    };
+
+    let on_show_more = {
+        let show_all = show_all.clone();
+        Callback::from(move |_| show_all.set(true))
+    };
+
     html! {
         <section class="py-5">
             <h1 class="font-[oswald] text-2xl font-bold text-gray-900 dark:text-gray-200">{"Experience"}</h1>
             {
-                for props.items.iter().map(|exp| html! {
+                for visible_items.iter().map(|exp| html! {
                     <div class="border-b border-gray-300 pb-4 mt-4">
                         <div class="flex justify-between items-center">
                             <div>
@@ -38,7 +50,13 @@ pub fn app(props: &ExperienceProps) -> Html {
                     </div>
                 })
             }
+            if !*show_all {
+               <button
+                    class="bg-white dark:bg-black mt-2 hover:bg-gray-100 text-gray-800 dark:text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow cursor-pointer"
+                    onclick={on_show_more}>
+                    {"Show More"}
+                </button>
+            }
         </section>
     }
-
 }

@@ -1,4 +1,3 @@
-use log::info;
 use yew::prelude::*;
 use web_sys::window;
 
