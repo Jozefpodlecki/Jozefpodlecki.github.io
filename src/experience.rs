@@ -54,7 +54,7 @@ pub fn app(props: &Props) -> Html {
                <button
                     class="bg-white dark:bg-black mt-2 hover:bg-gray-100 text-gray-800 dark:text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow cursor-pointer"
                     onclick={on_show_more}>
-                    {"Show More"}
+                    {"More"}
                 </button>
             }
         </section>

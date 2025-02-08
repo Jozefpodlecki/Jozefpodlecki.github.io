@@ -40,8 +40,6 @@ jobs:
         run: npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --minify 
       - name: Build App
         run: trunk build --release
-      - name: Test
-        run: ls -R ./dist
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

@@ -2,6 +2,10 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+.flex-col-center {
+  @apply flex flex-col items-center;
+}
+
 :root {
     --main-bg-color: #000;
     --main-text-color: #000;

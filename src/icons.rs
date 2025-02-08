@@ -77,13 +77,13 @@ pub fn codepen() -> Html {
 }
 
 #[derive(PartialEq, Properties)]
-pub struct LinkIconProps {
+pub struct IconProps {
     #[prop_or_default]
     pub class: Classes,
 }
 
 #[function_component(LinkIcon)]
-pub fn link_icon(props: &LinkIconProps) -> Html {   
+pub fn link_icon(props: &IconProps) -> Html {   
     html! {
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -98,3 +98,37 @@ pub fn link_icon(props: &LinkIconProps) -> Html {
         </svg>
     }
 }
+
+#[function_component(HomeIcon)]
+pub fn home_icon(props: &IconProps) -> Html {   
+      html! {
+        <svg
+            class={props.class.clone()}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20">
+            <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+         </svg>
+     }
+}
+
+#[function_component(CodeIcon)]
+pub fn code_icon(props: &IconProps) -> Html {   
+      html! {
+        <svg
+            class={props.class.clone()}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" />
+            </svg>
+     }
+}
+

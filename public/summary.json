@@ -11,7 +11,8 @@
         {
             "name": "Flocking Simulator",
             "description": "Interactive web-based application that demonstrates the emergent behavior of flocking, inspired by Craig Reynolds' Boids algorithm",
-            "link": "https://jozefpodlecki.github.io/boids-blazor"
+            "link": "https://jozefpodlecki.github.io/boids-blazor",
+            "github": "https://github.com/Jozefpodlecki/boids-blazor"
         }
     ],
     "experience": [

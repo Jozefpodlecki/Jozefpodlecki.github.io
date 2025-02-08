@@ -22,7 +22,7 @@ impl From<JsValue> for FetchError {
     }
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Default, Clone, PartialEq, Deserialize)]
 pub struct Summary {
     pub full_name: String,
     pub role: String,
@@ -31,7 +31,7 @@ pub struct Summary {
     pub experience: Vec<Experience>,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Default, Clone, PartialEq, Deserialize)]
 pub struct Social {
     pub linkedin: String,
     pub github: String,
@@ -39,14 +39,15 @@ pub struct Social {
     pub codepen: String,
 }
 
-#[derive(Debug, Clone, Deserialize, PartialEq)]
+#[derive(Debug, Default, Clone, Deserialize, PartialEq)]
 pub struct Project {
     pub name: String,
     pub description: String,
     pub link: String,
+    pub github: String,
 }
 
-#[derive(Debug, Clone, Deserialize, PartialEq)]
+#[derive(Debug, Default, Clone, Deserialize, PartialEq)]
 pub struct Experience {
     pub company: String,
     pub location: String,
