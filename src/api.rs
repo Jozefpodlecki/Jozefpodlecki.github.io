@@ -6,13 +6,7 @@ use web_sys::{Headers, Request, RequestInit, RequestMode, Response};
 use crate::models::{FetchError, Summary};
 
 pub async fn get_summary()  -> Result<Summary, FetchError> {
-    let base_url = if cfg!(debug_assertions) {
-        "http://localhost.:1420"
-    } else {
-        "https://jozefpodlecki.github.io"
-    };
-
-    let url = &format!("{}{}", base_url, "/public/summary.json");
+    let url = "public/summary.json";
     
     let request_options = RequestInit::new();
     request_options.set_method("GET");
