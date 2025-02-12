@@ -9,6 +9,12 @@
     },
     "projects": [
         {
+            "name": "Payment Processing System",
+            "description": "Simple event-driven application designed to simulate payment transactions, leveraging .NET 8, Azure CosmosDB, RabbitMQ, and MediatR",
+            "link": "https://github.com/Jozefpodlecki/payment-processing-system",
+            "github": "https://github.com/Jozefpodlecki/payment-processing-system"
+        },
+        {
             "name": "Flocking Simulator",
             "description": "Interactive web-based application that demonstrates the emergent behavior of flocking, inspired by Craig Reynolds' Boids algorithm",
             "link": "https://jozefpodlecki.github.io/boids-blazor",
