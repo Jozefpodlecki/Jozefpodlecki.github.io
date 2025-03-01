@@ -1,6 +1,6 @@
 use yew::*;
 
-use crate::{dark_mode_toggle::DarkModeToggle, layout::Layout};
+use crate::components::{dark_mode_toggle::DarkModeToggle, layout::Layout};
 
 #[derive(Properties, PartialEq)]
 pub struct Props {

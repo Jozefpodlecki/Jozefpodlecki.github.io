@@ -1,6 +1,6 @@
 use yew::*;
 
-use crate::{app_state::AppState, experience::ExperienceSection, icons::*, layout::Layout, projects_section::ProjectsSection};
+use crate::{components::{experience::ExperienceSection, icons::{CodepenIcon, DuolingoIcon, GithubIcon, LinkedinIcon, StackOverflowIcon}, layout::Layout, projects_section::ProjectsSection}, models::AppState};
 
 #[function_component(Home)]
 pub fn home() -> Html {
@@ -16,10 +16,11 @@ pub fn home() -> Html {
                     <span class="font-[oswald] block text-xl text-gray-700 dark:text-gray-200">{summary.role.clone()}</span>
 
                     <div class="flex justify-start gap-1 mt-2">
-                        <a class="dark:text-white" href={summary.social.linkedin.clone()}><Linkedin/></a>
-                        <a class="dark:text-white" href={summary.social.github.clone()}><Github/></a>
-                        <a class="dark:text-white" href={summary.social.codepen.clone()}><Codepen/></a>
-                        <a class="dark:text-white" href={summary.social.duolingo.clone()}><Duolingo/></a>
+                        <a class="dark:text-white" href={summary.social.linkedin.clone()}><LinkedinIcon/></a>
+                        <a class="dark:text-white" href={summary.social.github.clone()}><GithubIcon/></a>
+                        <a class="dark:text-white" href={summary.social.codepen.clone()}><CodepenIcon/></a>
+                        <a class="dark:text-white" href={summary.social.duolingo.clone()}><DuolingoIcon/></a>
+                        <a class="dark:text-white" href={summary.social.stackoverflow.clone()}><StackOverflowIcon/></a>
                     </div>
                 </div>
                 <img class="w-[150px] ml-auto hidden md:block" src="public/avatar.jpg"/>

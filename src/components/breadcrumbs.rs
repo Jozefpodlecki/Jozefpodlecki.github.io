@@ -1,7 +1,7 @@
 use yew::*;
 use yew_router::prelude::Link;
 
-use crate::{icons::{HomeIcon, LinkIcon}, route::Route};
+use crate::{components::icons::HomeIcon, route::Route};
 
 #[function_component(Breadcrumbs)]
 pub fn breadcrumbs() -> Html {

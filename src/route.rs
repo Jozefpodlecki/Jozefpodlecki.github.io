@@ -1,7 +1,7 @@
 use yew::*;
 use yew_router::Routable;
 
-use crate::{home::Home, not_found::NotFound, projects::Projects};
+use crate::pages::{home::Home, not_found::NotFound, projects::Projects};
 
 #[derive(Debug, Clone, Copy, PartialEq, Routable)]
 pub enum Route {

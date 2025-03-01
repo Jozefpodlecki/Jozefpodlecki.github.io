@@ -1,7 +1,8 @@
 use yew::*;
 use yew_router::hooks::use_navigator;
 
-use crate::{layout::Layout, route::Route};
+use crate::route::Route;
+use crate::components::layout::Layout;
 
 #[function_component(NotFound)]
 pub fn not_found() -> Html {

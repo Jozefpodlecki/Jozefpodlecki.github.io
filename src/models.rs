@@ -3,6 +3,11 @@ use std::{error::Error, fmt::{self, Debug, Display, Formatter}};
 use serde::Deserialize;
 use wasm_bindgen::JsValue;
 
+#[derive(Clone, Default, Debug, PartialEq)]
+pub struct AppState {
+    pub summary: Summary
+}
+
 #[derive(Debug, Clone, PartialEq)]
 pub struct FetchError {
     err: JsValue,
@@ -37,6 +42,7 @@ pub struct Social {
     pub github: String,
     pub duolingo: String,
     pub codepen: String,
+    pub stackoverflow: String,
 }
 
 #[derive(Debug, Default, Clone, Deserialize, PartialEq)]

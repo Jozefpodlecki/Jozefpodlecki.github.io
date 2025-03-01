@@ -1,7 +1,7 @@
 use yew::*;
 use yew_router::prelude::Link;
 
-use crate::{icons::{CodeIcon, LinkIcon}, models::Project, route::Route};
+use crate::{components::icons::*, models::Project, route::Route};
 
 #[derive(Debug, Clone, PartialEq, Properties)]
 pub struct Props {
@@ -39,9 +39,9 @@ pub fn projects_section(props: &Props) -> Html {
                     })
                 }
             </ul>
-            // <Link<Route> to={Route::Projects} classes="inline-block bg-white dark:bg-black mt-2 hover:bg-gray-100 text-gray-800 dark:text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow cursor-pointer">
-            //     { "More" }
-            // </Link<Route>>
+            <Link<Route> to={Route::Projects} classes="inline-block bg-white dark:bg-black mt-2 hover:bg-gray-100 text-gray-800 dark:text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow cursor-pointer">
+                { "More" }
+            </Link<Route>>
         </section>
     }
 

@@ -1,6 +1,6 @@
 use yew::*;
 
-use crate::{app_state::AppState, breadcrumbs::Breadcrumbs, icons::LinkIcon, layout::Layout};
+use crate::{components::{breadcrumbs::Breadcrumbs, icons::{CodeIcon, LinkIcon}, layout::Layout}, models::AppState};
 
 #[function_component(Projects)]
 pub fn projects() -> Html {
@@ -27,6 +27,12 @@ pub fn projects() -> Html {
                                     <p class="font-[roboto] text-gray-700 dark:text-gray-400 mt-1 text-sm">
                                         { &project.description }
                                     </p>
+                                    <a 
+                                        href={project.github.clone()} 
+                                        target="_blank" 
+                                        class="font-[roboto] dark:text-gray-200 text-lg">
+                                        <CodeIcon class="inline" />
+                                    </a>
                                 </div>
                             </li>
                         })

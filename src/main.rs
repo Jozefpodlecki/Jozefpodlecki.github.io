@@ -1,19 +1,10 @@
 mod app;
 mod app_state;
-mod icons;
-mod experience;
-mod projects_section;
-mod projects;
 mod api;
+mod components;
 mod models;
-mod dark_mode_toggle;
-mod loader;
-mod home;
-mod not_found;
+mod pages;
 mod route;
-mod breadcrumbs;
-mod error;
-mod layout;
 
 use app::App;
 use log::Level;

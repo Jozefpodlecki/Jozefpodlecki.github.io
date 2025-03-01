@@ -1,7 +1,7 @@
 use yew::*;
 use yew_router::{HashRouter, Switch};
 
-use crate::{api::get_summary, app_state::AppState, dark_mode_toggle::DarkModeToggle, error::ErrorPage, layout::Layout, loader::Loader, route::{switch, Route}};
+use crate::{api::get_summary, components::{dark_mode_toggle::DarkModeToggle, layout::Layout, loader::Loader}, models::AppState, pages::error::ErrorPage, route::{switch, Route}};
 
 async fn fetch_summary(
     app_state: UseStateHandle<AppState>, 
