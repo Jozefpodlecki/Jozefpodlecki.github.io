@@ -4,6 +4,12 @@ name: Deploy to GH Pages
 on:
   push:
     branches: ["master"]
+    paths:
+      - "crates/web/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - ".cargo/**"
+      - ".github/workflows/deploy.yml"
 
   workflow_dispatch:
 
