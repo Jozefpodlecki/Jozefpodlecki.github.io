@@ -1,0 +1,66 @@
+[
+  {
+    "code": "POL",
+    "note": "Poland - my country of origin, where I grew up and lived"
+  },
+  {
+    "code": "GBR",
+    "note": "United Kingdom"
+  },
+  {
+    "code": "CYP",
+    "year": 2025,
+    "note": "Paphos and Nicosia, Cyprus"
+  },
+  {
+    "code": "DEU",
+    "year": 2014,
+    "note": "Hamburg, Germany"
+  },
+  {
+    "code": "DEU",
+    "note": "Frankfurt Airport - airport transit only",
+    "kind": "transit"
+  },
+  {
+    "code": "HRV",
+    "year": 2024,
+    "note": "Croatia"
+  },
+  {
+    "code": "TUR",
+    "year": 2025,
+    "note": "Antalya, Turkey"
+  },
+  {
+    "code": "PHL",
+    "year": 2026,
+    "note": "Cebu, Philippines"
+  },
+  {
+    "code": "PRT",
+    "note": "Miradouro da Ponta do Rosto, Caniçal, Machico, Madeira, Portugal",
+    "year": 2026
+  },
+  {
+    "code": "EGY",
+    "year": 2004,
+    "note": "Cairo, Egypt"
+  },
+  {
+    "code": "VEN",
+    "year": 2005,
+    "note": "Venezuela"
+  },
+  {
+    "code": "AUS",
+    "year": 2006,
+    "note": "New South Wales, Australia"
+  },
+  {
+    "code": "ARE",
+    "year": 2026,
+    "note": "Dubai International Airport - airport transit only",
+    "kind": "transit"
+  }
+]

@@ -1,0 +1,89 @@
+
+[config]
+default_to_workspace = false
+
+[tasks.dev]
+description = "Start the Trunk development server"
+command = "trunk"
+args = ["serve"]
+cwd = "./crates/web"
+
+[tasks.build]
+description = "Build the portfolio"
+command = "trunk"
+args = ["build"]
+cwd = "./crates/web"
+
+[tasks.release]
+description = "Build the production portfolio"
+command = "trunk"
+args = ["build", "--release"]
+cwd = "./crates/web"
+
+[tasks.fmt]
+description = "Format Rust source"
+command = "cargo"
+args = ["fmt", "--all"]
+
+[tasks.fmt-check]
+description = "Check Rust formatting"
+command = "cargo"
+args = ["fmt", "--all", "--", "--check"]
+
+[tasks.check]
+description = "Check the Rust workspace"
+command = "cargo"
+args = ["check", "--workspace", "--all-targets"]
+
+[tasks.clippy]
+description = "Run Clippy"
+command = "cargo"
+args = [
+    "clippy",
+    "--workspace",
+    "--all-targets",
+    "--",
+    "-D",
+    "warnings",
+]
+
+[tasks.unit]
+description = "Run browser-free E2E infrastructure tests"
+command = "cargo"
+args = ["test", "-p", "portfolio-e2e", "--lib"]
+
+[tasks.e2e]
+description = "Build site and run browser E2E tests"
+dependencies = ["build"]
+command = "cargo"
+args = [
+    "test",
+    "-p",
+    "portfolio-e2e",
+    "--tests",
+    "--",
+    "--test-threads=1",
+    "--nocapture",
+]
+
+[tasks.screenshots]
+description = "Generate browser screenshots"
+command = "cargo"
+args = [
+    "test",
+    "-p",
+    "portfolio-e2e",
+    "--test",
+    "visual",
+    "--",
+    "--nocapture",
+]
+
+[tasks.verify]
+description = "Run formatting, compilation, lint and unit checks"
+dependencies = [
+    "fmt-check",
+    "check",
+    "clippy",
+    "unit",
+]

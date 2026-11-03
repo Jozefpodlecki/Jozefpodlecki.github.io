@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "./main.css";
+@source "../src";
+@theme inline {
+  --color-page: var(--bg);
+  --color-ink: var(--text);
+  --color-subtle: var(--muted);
+  --color-divider: var(--line);
+  --color-highlight: var(--accent);
+  --color-on-accent: var(--accent-contrast);
+  --color-card: var(--panel);
+  --color-layer: var(--surface);
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Józef Podlecki is a software engineer building reliable web applications, data systems, and tools. Explore Rust projects, experience, and more.">
+  <meta name="author" content="Józef Podlecki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jozefpodlecki.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Józef Podlecki - Portfolio">
+  <meta property="og:title" content="Józef Podlecki - Software Engineer">
+  <meta property="og:description" content="Rust, WebAssembly, data systems, and practical software engineering projects by Józef Podlecki.">
+  <meta property="og:url" content="https://jozefpodlecki.github.io/">
+  <meta property="og:image" content="https://jozefpodlecki.github.io/wallpaper.jpg">
+  <meta property="og:image:alt" content="Coastal cliffs at Miradouro da Ponta do Rosto, Madeira">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Józef Podlecki - Software Engineer">
+  <meta name="twitter:description" content="Rust, WebAssembly, data systems, and practical software engineering projects.">
+  <meta name="twitter:image" content="https://jozefpodlecki.github.io/wallpaper.jpg">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Jozef Podlecki - Portfolio</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Józef Podlecki",
+      "url": "https://jozefpodlecki.github.io/",
+      "jobTitle": "Software Engineer",
+      "sameAs": [
+        "https://github.com/Jozefpodlecki",
+        "https://www.linkedin.com/in/jozef-witold-podlecki"
+      ]
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap">
+  <link data-trunk rel="copy-file" href="favicon.ico">
+  <link data-trunk rel="copy-file" href="public/robots.txt">
+  <link data-trunk rel="copy-file" href="public/sitemap.xml">
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link data-trunk rel="rust" href="Cargo.toml">
+  <link data-trunk rel="tailwind-css" href="styles/tailwind.css">
+  <link data-trunk rel="copy-dir" href="public/data">
+  <link data-trunk rel="copy-dir" href="public/icons">
+  <link data-trunk rel="copy-dir" href="public/images">
+  <link data-trunk rel="copy-file" href="public/avatar.jpg">
+  <link data-trunk rel="copy-file" href="public/Jozef_Podlecki_Resume_2026_11_03_Public.pdf">
+  <link data-trunk rel="copy-file" href="public/wallpaper.jpg">
+  <style>
+    :root {
+      color-scheme: light;
+      --splash-bg: #f7f7f4;
+      --splash-text: #1a2423;
+      --splash-muted: #5c6966;
+      --splash-line: #d8ded9;
+      --splash-accent: #146e61;
+    }
+    :root[data-palette="navy"] {
+      --splash-bg: #f3f6fc;
+      --splash-text: #172338;
+      --splash-muted: #66758c;
+      --splash-line: #d4dfea;
+      --splash-accent: #245db4;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --splash-bg: #091112;
+      --splash-text: #f5f8f8;
+      --splash-muted: #a8b7b1;
+      --splash-line: #304043;
+      --splash-accent: #35beb5;
+    }
+    :root[data-palette="navy"][data-theme="dark"] {
+      --splash-bg: #0b1528;
+      --splash-text: #f2f6ff;
+      --splash-muted: #aabbd3;
+      --splash-line: #2b405d;
+      --splash-accent: #79afff;
+    }
+    #splash {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: grid;
+      place-items: center;
+      background: var(--splash-bg);
+      color: var(--splash-text);
+      transition: opacity 300ms ease, visibility 300ms ease;
+    }
+    #splash.splash--hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #splash .splash-inner {
+      padding: 24px;
+      text-align: center;
+    }
+    #splash .splash-mark {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.08em;
+      animation: splash-mark-enter 500ms ease-out both;
+    }
+    #splash .splash-inner p {
+      font-family: 'Manrope', system-ui, sans-serif;
+      color: var(--splash-muted);
+      animation: splash-copy-enter 500ms 160ms ease-out both;
+    }
+    #splash .splash-progress {
+      width: 100px;
+      height: 3px;
+      margin-inline: auto;
+      overflow: hidden;
+      background: var(--splash-line);
+      animation: splash-copy-enter 500ms 280ms ease-out both;
+    }
+    #splash .splash-progress::before {
+      content: '';
+      display: block;
+      width: 40%;
+      height: 100%;
+      background: var(--splash-accent);
+      animation: splash-slide 1.25s ease-in-out infinite alternate;
+    }
+    .noscript {
+      position: fixed;
+      z-index: 110;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 25px;
+      background: var(--splash-bg);
+      color: var(--splash-text);
+      text-align: center;
+    }
+    @keyframes splash-slide {
+      to { transform: translateX(150%); }
+    }
+    @keyframes splash-mark-enter {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes splash-copy-enter {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #splash,
+      #splash .splash-mark,
+      #splash .splash-inner p,
+      #splash .splash-progress,
+      #splash .splash-progress::before {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    (function () {
+      var requested = new URLSearchParams(window.location.search).get('palette');
+      var palette = requested === 'navy' || requested === 'teal'
+        ? requested
+        : Math.random() < 0.5 ? 'teal' : 'navy';
+      document.documentElement.setAttribute('data-palette', palette);
+      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      try {
+        var preference = localStorage.getItem('portfolio-theme');
+        if (preference === 'dark' || preference === 'light') {
+          dark = preference === 'dark';
+        }
+      } catch (error) {}
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+<body>
+  <div id="splash" class="splash" role="status" aria-live="polite">
+    <div class="splash-inner"><div class="splash-mark">JP</div><p>Preparing portfolio</p><div class="splash-progress" aria-hidden="true"></div></div>
+  </div>
+  <script>
+    if (window.location.protocol === 'file:') {
+      var status = document.querySelector('#splash .splash-inner p');
+      var progress = document.querySelector('#splash .splash-progress');
+      if (status) {
+        status.textContent = 'This site needs a local web server. Run cargo make dev, then open http://127.0.0.1:1420/.';
+      }
+      if (progress) {
+        progress.hidden = true;
+      }
+    }
+  </script>
+  <div id="app"></div>
+  <noscript><div class="noscript">This portfolio requires JavaScript to run.</div></noscript>
+</body>
+</html>

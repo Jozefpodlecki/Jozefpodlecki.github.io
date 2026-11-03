@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sudoku",
+    "slug": "sudoku",
+    "description": "A Rust-powered Sudoku game with puzzle generation, logical hints, step-by-step solving, and difficulty ratings.",
+    "tags": [
+      "Rust",
+      "Yew",
+      "WebAssembly",
+      "Algorithms"
+    ],
+    "body": "Sudoku combines a standalone Rust puzzle engine with a Yew web client compiled to WebAssembly. The core crate handles grid representations, puzzle generation, solving, and difficulty assessment independently from the interface. The web client provides keyboard-based input, candidate display, a timer, and a theme that persists between visits.\n\nThe puzzle generator begins with a complete grid and removes clues while checking that the resulting puzzle has a unique solution. An exact-cover model and Knuth's Algorithm X support the underlying solving and uniqueness checks. Alongside the exact-cover solver, a logical solving system recognises techniques including singles, locked candidates, subsets, fish patterns, and XY-Wing.\n\nPlayers can request a hint that identifies the next technique and relevant cells, or apply an individual deduction with Solve Step. A rating system examines the solving technique trace and guessing requirements to classify puzzles from Easy through Extreme.",
+    "link": "https://jozefpodlecki.github.io/Sudoku/",
+    "github": "https://github.com/Jozefpodlecki/Sudoku",
+    "image": "images/sudoku.webp",
+    "priority": 10
+  },
+  {
+    "name": "win-drives",
+    "slug": "win-drives",
+    "description": "A low-level Rust library for enumerating and inspecting Windows physical drives and disk volumes using NT APIs.",
+    "tags": [
+      "Rust",
+      "Windows",
+      "NT API",
+      "Systems"
+    ],
+    "body": "win-drives is a Windows-only Rust library that exposes physical disks and hard-disk volumes through typed wrappers. It uses native NT operations such as NtCreateFile, NtDeviceIoControlFile, and NtReadFile to open devices, inspect geometry and partition information, and read raw sectors.\n\nPhysicalDrive and HarddiskVolume provide enumeration and open operations with structured error handling. Callers can inspect disk size, sector geometry, device numbers, layouts, and volume partition information. Sector reads validate buffer alignment against the reported sector size.\n\nThe crate provides optional support for environments without the standard library and includes Rust Read/Seek integration when std is enabled. Reading physical devices generally requires administrator privileges; the library is intended for low-level inspection, not as a general file-system browser.",
+    "link": "",
+    "github": "https://github.com/Jozefpodlecki/win-drives",
+    "image": "images/win-drives.webp",
+    "priority": 20
+  },
+  {
+    "name": "Zipeek",
+    "slug": "zipeek",
+    "description": "An in-progress Chinese vocabulary lookup and practice application built with Rust, Yew, and DuckDB-WASM.",
+    "tags": [
+      "Rust",
+      "Yew",
+      "WebAssembly",
+      "DuckDB"
+    ],
+    "body": "Zipeek is a client-side Chinese-English vocabulary application with a Rust/Yew interface and a pre-generated dictionary. The public repository contains a separate Rust dictionary-generation crate, a reusable core crate, a web frontend, and an E2E test workspace. It is actively being developed, and the published repository may not reflect the latest local changes.\n\nThe browser loads a read-only dictionary through DuckDB-WASM, allowing vocabulary lookup and per-character exploration without requiring a dedicated application API for normal queries. The repository documents generated data, source attribution, and an explicit verification and installation workflow for dictionary updates.\n\nThe public version includes interactive practice with matching and multiple-choice exercises, Endless and Fixed modes, and mixed question types. Browse and the Random shortcut are still described as placeholders in the public README. This case study describes the currently published implementation rather than unpushed work.",
+    "link": "",
+    "github": "https://github.com/Jozefpodlecki/zipeek",
+    "image": "images/zipeek.webp",
+    "priority": 30
+  }
+]

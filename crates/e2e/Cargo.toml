@@ -1,0 +1,17 @@
+[package]
+name = "portfolio-e2e"
+version.workspace = true
+repository.workspace = true
+edition.workspace = true
+rust-version = "1.97.0"
+
+[dependencies]
+thirtyfour = { version = "0.38.1", features = ["manager"] }
+tokio = { version = "1.54.1", features = ["macros", "rt-multi-thread", "process", "net", "time", "io-util", "fs"] }
+axum = "0.8"
+tracing = "0.1"
+serde_json = "1.0.154"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+
+[dev-dependencies]
+image = { version = "0.25", default-features = false, features = ["png"] }

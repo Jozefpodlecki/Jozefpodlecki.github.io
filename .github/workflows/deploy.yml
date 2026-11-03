@@ -11,10 +11,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Restore cache
-        uses: actions/cache@v3
+      - uses: actions/checkout@v7
+      - uses: actions/cache@v5
         with:
           path: |
             ~/.cargo/bin
@@ -23,27 +21,14 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - name: Install Trunk
-        uses: jetli/trunk-action@v0.5.0
+      - uses: jetli/trunk-action@v0.5.1
         with:
           version: "latest"
-      - name: Add wasm target
-        run: |
-          rustup target add wasm32-unknown-unknown
-      - name: Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Npm
-        run: npm install
-      - name: Tailwind
-        run: npx @tailwindcss/cli -i ./styles/main.css -o ./styles/output.css --minify 
-      - name: Build App
-        run: trunk build --release
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - run: rustup target add wasm32-unknown-unknown
+      - run: trunk build --release
+        working-directory: crates/web
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: "./dist/"
 
@@ -61,4 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

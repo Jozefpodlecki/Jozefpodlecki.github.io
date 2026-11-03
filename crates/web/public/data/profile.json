@@ -1,0 +1,31 @@
+{
+  "full_name": "Józef Podlecki",
+  "role": "Software Engineer",
+  "intro": "I create thoughtful web experiences, reliable services, and useful tools.",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/jozef-witold-podlecki/",
+    "github": "https://github.com/Jozefpodlecki"
+  },
+  "about": [
+    "I'm a software engineer working across backend services, data-intensive systems, and web applications. Much of my professional experience is in .NET and SQL Server, with work spanning application modernisation, reporting, data pipelines, and cloud platforms including Azure and Google Cloud. I enjoy understanding how systems fit together and making them more reliable, maintainable, and practical to use.",
+    "Outside of work, I enjoy experimenting with Rust, WebAssembly, and new technologies, often building small projects to explore ideas and sharpen my skills. Away from the keyboard, I enjoy travelling, exploring new places, and photography."
+  ],
+  "background": {
+    "image": "wallpaper.jpg",
+    "title": "Miradouro da Ponta do Rosto",
+    "location": "Caniçal, Machico, Madeira, Portugal",
+    "year": 2026,
+    "photographer": "Józef Podlecki",
+    "description": "A viewpoint on the Ponta de São Lourenço peninsula, on the eastern coast of Madeira."
+  },
+  "education": [
+    {
+      "institution": "University of Warmia and Mazury in Olsztyn",
+      "location": "Olsztyn, Poland",
+      "qualification": "Engineering of IT Systems",
+      "period": "2015 - 2019",
+      "website": "https://uwm.edu.pl/",
+      "logo": "images/uwm-logo.png"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "company": "CGI",
+    "location": "Leeds, UK",
+    "employment_type": "Full Time",
+    "work_mode": "Remote",
+    "role": "Software Engineer",
+    "period": "Sep 2025 - Present",
+    "responsibilities": [
+      "Contribute to an Azure-based data platform supporting tariff, billing, and invoicing workflows for a UK utilities retailer.",
+      "Develop and optimise SQL Server stored procedures for high-volume data ingestion, tariff calculations, invoice generation, and billing.",
+      "Investigate data issues and improve SQL performance through indexing, query tuning, and execution plan analysis.",
+      "Build PowerShell tools for testing, validation, and operational tasks across the data pipeline.",
+      "Review code and collaborate with teams working on Azure Functions and services written in Python and Node.js."
+    ]
+  },
+  {
+    "company": "BJSS",
+    "location": "Leeds, UK",
+    "employment_type": "Full Time",
+    "work_mode": "Hybrid",
+    "role": "Software Engineer",
+    "period": "Jan 2022 - Sep 2025",
+    "responsibilities": [
+      "Modernised legacy applications by extracting business logic and database access into ASP.NET Core Web APIs.",
+      "Maintained and enhanced SQL Server stored procedures, views, and Agent jobs across reporting and back-office systems.",
+      "Developed complex SSRS reports and supported hybrid reporting through GCP-linked servers and BigQuery.",
+      "Helped migrate WinForms functionality to ASP.NET, Razor, and React-based web applications.",
+      "Worked with QA teams, reviewed code, mentored engineers, and maintained technical documentation."
+    ]
+  },
+  {
+    "company": "Vismo",
+    "location": "York, UK",
+    "employment_type": "Full Time",
+    "work_mode": "Hybrid",
+    "role": ".NET Developer",
+    "period": "Aug 2020 - Jan 2022",
+    "responsibilities": [
+      "Developed features for an ASP.NET Core secure location-tracking portal, including configuration and subscription-based feature gating.",
+      "Contributed to an Azure Functions event processor handling data from smartphone and GSM devices.",
+      "Supported modular .NET services, updated module contracts, and resolved customer-reported issues.",
+      "Imported geodata with C# and SQL, addressed responsive UI issues, and investigated mobile-to-portal synchronisation."
+    ]
+  },
+  {
+    "company": "h2o creative",
+    "location": "Leeds, UK",
+    "employment_type": "Full Time",
+    "work_mode": "In-Office",
+    "role": "Software Developer",
+    "period": "Sep 2019 - Jul 2020",
+    "responsibilities": [
+      "Developed various scale web applications written in React, Asp Net Web Forms, Asp Net Core and ZURB Foundation",
+      "Maintained existing web applications and applied new functionalities to them.",
+      "Created and modified email templates which targeted most email clients."
+    ]
+  },
+  {
+    "company": "Billennium",
+    "location": "Olsztyn, PL",
+    "employment_type": "Full Time",
+    "work_mode": "Hybrid",
+    "role": "SQL/C# Developer",
+    "period": "Jul 2016 - Aug 2019",
+    "responsibilities": [
+      "Developed Tableau visualizations and dashboards using Tableau Desktop.",
+      "Designed and implemented software in C# 4.5 with Visual Studio 2015 and later.",
+      "Worked alongside Paperless BPM software development team.",
+      "Participated in inhouse projects.",
+      "Contributed software engineering expertise in the development of products through the software lifecycle."
+    ]
+  }
+]

@@ -1,0 +1,225 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f4;
+  --text: #1a2423;
+  --muted: #5c6966;
+  --line: #d8ded9;
+  --accent: #146e61;
+  --accent-contrast: #ffffff;
+  --panel: #fff;
+  --surface: #edf1eb;
+  --map-ocean: #e4efeb;
+  --map-land: #aebfbb;
+  --map-stroke: #f4f7f5;
+  --map-visited: #087e78;
+  --map-selected: #075e59;
+  --map-hover: #0caaa1;
+  --map-transit: #93b9b1;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #091112;
+  --text: #f5f8f8;
+  --muted: #a8b7b1;
+  --line: #304043;
+  --accent: #35beb5;
+  --accent-contrast: #091112;
+  --panel: #101a1b;
+  --surface: #172526;
+  --map-ocean: #101c20;
+  --map-land: #405056;
+  --map-stroke: #122328;
+  --map-visited: #20a69e;
+  --map-selected: #8ee3d5;
+  --map-hover: #65c5bb;
+  --map-transit: #586e71;
+}
+
+:root[data-palette="navy"] {
+  --bg: #f3f6fc;
+  --text: #172338;
+  --muted: #66758c;
+  --line: #d4dfea;
+  --accent: #245db4;
+  --accent-contrast: #ffffff;
+  --panel: #ffffff;
+  --surface: #e9eff8;
+  --map-ocean: #e5edf8;
+  --map-land: #a6b8cd;
+  --map-stroke: #f3f6fc;
+  --map-visited: #346bc6;
+  --map-selected: #204a9a;
+  --map-hover: #4b81dc;
+  --map-transit: #98abc6;
+}
+:root[data-palette="navy"][data-theme="dark"] {
+  --bg: #0b1528;
+  --text: #f2f6ff;
+  --muted: #aabbd3;
+  --line: #2b405d;
+  --accent: #79afff;
+  --accent-contrast: #0b1528;
+  --panel: #111e34;
+  --surface: #192a43;
+  --map-ocean: #112138;
+  --map-land: #405673;
+  --map-stroke: #14263e;
+  --map-visited: #5998ed;
+  --map-selected: #b4d5ff;
+  --map-hover: #8ac2ff;
+  --map-transit: #657d9a;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--surface);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--surface);
+  border-radius: 999px;
+  background: var(--accent);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--map-hover);
+}
+.project-live-action,
+.project-live-action svg {
+  color: var(--accent-contrast);
+}
+body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Manrope', system-ui, sans-serif; line-height: 1.6; }
+h1, h2, h3, .brand { font-family: 'Space Grotesk', system-ui, sans-serif; line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 5vw, 4.8rem); letter-spacing: -.055em; margin: .15em 0; }
+h2 { font-size: clamp(1.65rem, 3vw, 2.3rem); letter-spacing: -.04em; }
+h3 { font-size: 1.2rem; margin: .15em 0; }
+a:not([class]) { color: var(--accent); text-underline-offset: 4px; }
+button { font: inherit; cursor: pointer; }
+:where(a, button) > svg { pointer-events: none; }
+:where(a, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.site-background { position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: linear-gradient(90deg, rgba(9,17,18,.97), rgba(9,17,18,.82) 42%, rgba(9,17,18,.56)), linear-gradient(180deg, rgba(9,17,18,.22), var(--bg) 95%), url('wallpaper.jpg'); background-position: center, center, center 30%; background-size: cover; background-repeat: no-repeat; }
+:root:not([data-theme="dark"]) .site-background { opacity: .72; background-image: linear-gradient(90deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 72%, transparent) 42%, color-mix(in srgb, var(--bg) 16%, transparent) 100%), linear-gradient(180deg, transparent 15%, var(--bg) 98%), url('wallpaper.jpg'); }
+:root[data-theme="dark"] .site-background { opacity: .72; }
+[data-component="pointer-glow"] {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :root[data-theme="dark"] [data-component="pointer-glow"] {
+    position: fixed;
+    z-index: 0;
+    top: -160px;
+    left: -160px;
+    width: 320px;
+    height: 320px;
+    display: block;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%);
+    opacity: 0;
+    transform: translate3d(var(--pointer-x, -400px), var(--pointer-y, -400px), 0);
+    transition: transform 190ms ease-out, opacity 200ms ease-out;
+  }
+  :root[data-theme="dark"] [data-component="site-frame"]:hover > [data-component="pointer-glow"] {
+    opacity: 1;
+  }
+}
+.section::before { content: ""; position: absolute; inset: 0 0 auto; height: 1px; opacity: .8; background: linear-gradient(90deg, transparent, var(--line) 14%, var(--accent) 50%, var(--line) 86%, transparent); background-size: 180% 100%; animation: divider-drift 22s ease-in-out infinite alternate; pointer-events: none; }
+@keyframes divider-drift { from { background-position: 100% 0; } to { background-position: 0 0; } }
+[data-component="project-card"] .project-visual,
+.project-case-cover {
+    background-color: #11292d;
+    background-position: center;
+    background-size: cover;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+[data-component="experience-section"] { position: relative; }
+[data-component="experience-entry"] { align-items: start; }
+[data-component="project-card"] { background: color-mix(in srgb, var(--panel) 93%, transparent); backdrop-filter: blur(12px); }
+[data-component="route-content"]:focus { outline: none; }
+[data-component="experience-section"]::before { opacity: .7; }
+[data-component="experience-entry"]:hover > span:first-child { background: var(--accent); }
+[data-component="experience-list"] { border-image: linear-gradient(to bottom, var(--accent), var(--line) 65%, transparent) 1; }
+[data-component="technology-credit"] svg { display: block; }
+[data-component="travel-map"] path[data-visited="true"]:hover { filter: brightness(1.25); }
+@media (max-width: 640px) {
+  .site-background { background-position: center, center, 65% center; }
+  :root[data-theme="dark"] .site-background { opacity: .52; }
+}
+:root:not([data-theme="dark"]) [data-component="social-links"] a { background: transparent; }
+
+.brand-glow {
+  position: relative;
+  display: inline-block;
+  transition: color 220ms ease, text-shadow 220ms ease;
+}
+:root[data-theme="dark"] .brand-glow {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+:root[data-theme="dark"] .brand-glow:hover,
+:root[data-theme="dark"] .brand-glow:focus-visible {
+  color: var(--accent);
+  text-shadow: 0 0 9px color-mix(in srgb, var(--accent) 75%, transparent), 0 0 28px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+[data-component="hero-flow-field"] {
+  --hero-field-surface: #f2f8f5;
+  box-shadow: inset 0 0 40px rgba(12, 110, 103, 0.05);
+}
+.hero-flow-ambient {
+  background: radial-gradient(ellipse at 65% 55%, rgba(34, 174, 157, 0.055), transparent 62%);
+}
+.hero-flow-vignette {
+  box-shadow: inset 0 0 26px 6px rgba(23, 85, 78, 0.045);
+}
+:root[data-theme="dark"] [data-component="hero-flow-field"] {
+  --hero-field-surface: #071c20;
+  box-shadow: inset 0 0 60px rgba(12, 190, 181, 0.08);
+}
+:root[data-theme="dark"] .hero-flow-ambient {
+  background: radial-gradient(ellipse at 65% 55%, rgba(17, 139, 132, 0.18), transparent 62%);
+}
+:root[data-theme="dark"] .hero-flow-vignette {
+  box-shadow: inset 0 0 70px 24px rgba(4, 18, 20, 0.38);
+}
+
+html[data-photo-viewer-open="true"],
+html[data-photo-viewer-open="true"] body {
+  overflow: hidden;
+}
+.photo-viewer {
+  animation: photo-viewer-appear 250ms ease-out both;
+}
+@keyframes photo-viewer-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+:root[data-palette="navy"][data-theme="dark"] .site-background {
+  background-image: linear-gradient(90deg, rgba(11,21,40,.97), rgba(11,21,40,.86) 42%, rgba(11,21,40,.65)), linear-gradient(180deg, rgba(11,21,40,.28), var(--bg) 95%), url('wallpaper.jpg');
+}
+:root[data-palette="navy"] [data-component="hero-flow-field"] {
+  --hero-field-surface: #eaf1fc;
+}
+:root[data-palette="navy"][data-theme="dark"] [data-component="hero-flow-field"] {
+  --hero-field-surface: #091e39;
+}
+
+:root[data-palette="navy"] .hero-flow-ambient {
+  background: radial-gradient(ellipse at 65% 55%, rgba(70,123,206,0.065), transparent 62%);
+}
+:root[data-palette="navy"] .hero-flow-vignette {
+  box-shadow: inset 0 0 26px 6px rgba(28,67,135,0.035);
+}
+:root[data-palette="navy"][data-theme="dark"] .hero-flow-ambient {
+  background: radial-gradient(ellipse at 65% 55%, rgba(72,120,224,0.2), transparent 62%);
+}
+:root[data-palette="navy"][data-theme="dark"] .hero-flow-vignette {
+  box-shadow: inset 0 0 70px 24px rgba(5,14,36,0.38);
+}

@@ -1,0 +1,16 @@
+pub const PAGE_BODY: &str = "body";
+pub const MAIN_HEADING: &str = "main h1";
+pub const GITHUB_LINK: &str = "[data-social='github']";
+pub const LINKEDIN_LINK: &str = "[data-social='linkedin']";
+pub const THEME_TOGGLE: &str = "[data-component='theme-toggle']";
+pub const SPLASH: &str = "#splash";
+pub const APP_READY: &str = "[data-component='app-shell']";
+pub const CONTENT_ERROR: &str = "[data-component='content-error']";
+pub const CONTENT_RETRY: &str = "[data-component='content-retry']";
+pub const PROJECT_CARDS: &str = "[data-component='project-card']";
+pub const PROJECTS_EMPTY: &str = "[data-component='empty-projects']";
+pub const PROJECT_FILTERS: &str = "[data-component='project-filters']";
+pub const PROJECT_GRID: &str = "[data-component='project-grid']";
+pub const EXPERIENCE_SECTION: &str = "[data-component='experience-section']";
+pub const EXPERIENCE_ENTRIES: &str = "[data-component='experience-entry']";
+pub const ABOUT_PORTRAIT: &str = "[data-component='about-portrait']";
